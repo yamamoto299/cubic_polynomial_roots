@@ -22,3 +22,10 @@ In the "three distinct real roots" case (the *casus irreducibilis*) Cardano's ra
 Roots are always returned as `complex`, even when the imaginary part is zero. This keeps the return type uniform across all three discriminant branches. Coefficients must be real; passing complex coefficients is not supported.
 
 Exported names: `CubicPolynomial`, `solve_cubic`.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
