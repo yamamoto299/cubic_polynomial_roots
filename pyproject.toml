@@ -1,6 +1,6 @@
 [project]
 name = "cubic-polynomial-roots"
-version = "0.1.0"
+version = "0.1.1"
 description = "Calculates the real and complex roots of a cubic equation using Cardano's method."
 requires-python = ">=3.10"
 dependencies = []
